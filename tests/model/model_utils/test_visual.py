@@ -18,9 +18,9 @@ import pytest
 import torch
 from transformers import AutoConfig, AutoModelForVision2Seq
 
-from llamafactory.extras.packages import is_transformers_version_greater_than
-from llamafactory.hparams import FinetuningArguments, ModelArguments
-from llamafactory.model.adapter import init_adapter
+from gym.extras.packages import is_transformers_version_greater_than
+from gym.hparams import FinetuningArguments, ModelArguments
+from gym.model.adapter import init_adapter
 
 
 @pytest.mark.parametrize("freeze_vision_tower", (False, True))

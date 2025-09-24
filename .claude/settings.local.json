@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__hanzo__bash",
+      "mcp__hanzo__read",
+      "mcp__hanzo__edit",
+      "mcp__hanzo__run"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -18,7 +18,7 @@ import pytest
 import torch
 from transformers import AutoConfig, AutoModelForCausalLM
 
-from llamafactory.model.model_utils.misc import find_expanded_modules
+from gym.model.model_utils.misc import find_expanded_modules
 
 
 HF_TOKEN = os.getenv("HF_TOKEN")

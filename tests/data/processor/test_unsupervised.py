@@ -19,7 +19,7 @@ import pytest
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
-from llamafactory.train.test_utils import load_dataset_module
+from gym.train.test_utils import load_dataset_module
 
 
 DEMO_DATA = os.getenv("DEMO_DATA", "llamafactory/demo_data")

@@ -14,8 +14,8 @@
 
 import os
 
-from llamafactory.extras.misc import fix_proxy, is_env_enabled
-from llamafactory.webui.interface import create_ui
+from gym.extras.misc import fix_proxy, is_env_enabled
+from gym.webui.interface import create_ui
 
 
 def main():

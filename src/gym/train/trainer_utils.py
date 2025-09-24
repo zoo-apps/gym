@@ -92,7 +92,7 @@ def create_modelcard_and_push(
     kwargs = {
         "tasks": "text-generation",
         "finetuned_from": model_args.model_name_or_path,
-        "tags": ["llama-factory", finetuning_args.finetuning_type],
+        "tags": ["zoo-gym", finetuning_args.finetuning_type],
     }
     if data_args.dataset is not None:
         kwargs["dataset"] = data_args.dataset

@@ -1,0 +1,151 @@
+# Gym Configuration for Qwen3 Fine-tuning
+# Zoo Labs Foundation Inc - zoo.ngo
+# Based on your zen project configurations
+
+# Model Selection (choose one)
+models:
+  qwen3_4b:
+    model_name_or_path: "Qwen/Qwen3-4B-Instruct"
+    template: "qwen3"
+    
+  qwen3_omni_30b:
+    model_name_or_path: "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+    template: "qwen3"
+    
+  qwen3_thinking:
+    model_name_or_path: "Qwen/Qwen3-Omni-30B-A3B-Thinking"
+    template: "qwen3_nothink"  # Special template for thinking models
+
+# Training Methods
+training_methods:
+  # QLoRA - Best for limited memory (8-16GB)
+  qlora:
+    finetuning_type: "lora"
+    quantization_bit: 4
+    bnb_4bit_compute_dtype: "bfloat16"
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_use_double_quant: true
+    lora_rank: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    lora_target: "all"  # or ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj"]
+    
+  # Standard LoRA - Good balance (16-24GB)
+  lora:
+    finetuning_type: "lora"
+    lora_rank: 32
+    lora_alpha: 64
+    lora_dropout: 0.1
+    lora_target: "all"
+    
+  # Full fine-tuning - Requires lots of memory (32GB+)
+  full:
+    finetuning_type: "full"
+    
+# Optimization Settings
+optimization:
+  # For Apple Silicon (MPS)
+  mps:
+    device: "mps"
+    bf16: false  # MPS doesn't support bf16
+    fp16: true
+    gradient_checkpointing: true
+    
+  # For NVIDIA GPUs
+  cuda:
+    device: "cuda"
+    bf16: true
+    fp16: false
+    flash_attn: "auto"
+    gradient_checkpointing: true
+    
+  # For CPU (very slow)
+  cpu:
+    device: "cpu"
+    bf16: false
+    fp16: false
+    gradient_checkpointing: true
+
+# Training Hyperparameters
+hyperparameters:
+  # Batch sizes (adjust based on memory)
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  
+  # Learning rate
+  learning_rate: 1e-4
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.1
+  
+  # Training duration
+  num_train_epochs: 3
+  max_steps: -1  # Set to positive value to limit steps
+  
+  # Regularization
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Evaluation
+  eval_strategy: "steps"
+  eval_steps: 100
+  save_strategy: "steps"
+  save_steps: 100
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+
+# Dataset Configuration
+datasets:
+  # Built-in datasets
+  alpaca:
+    dataset: "alpaca_en_demo"
+    cutoff_len: 2048
+    
+  # Custom dataset
+  custom:
+    dataset: "custom_dataset"
+    dataset_dir: "./data"
+    cutoff_len: 2048
+    preprocessing_num_workers: 4
+    
+  # Multimodal dataset (for Qwen3-Omni)
+  multimodal:
+    dataset: "multimodal_demo"
+    cutoff_len: 2048
+    vision_tower: "openai/clip-vit-large-patch14-336"
+
+# Output Settings
+output:
+  output_dir: "./output/qwen3-finetuned"
+  logging_dir: "./logs"
+  logging_steps: 10
+  plot_loss: true
+  overwrite_output_dir: true
+
+# Advanced Features
+advanced:
+  # DeepSpeed for multi-GPU
+  deepspeed: null  # or path to deepspeed config
+  
+  # FSDP for distributed training
+  fsdp: null
+  
+  # NEFTune for better performance
+  neftune_noise_alpha: 5.0
+  
+  # Mixture of Depths
+  use_mixture_of_depths: false
+  
+  # DPO/RLHF settings
+  dpo_beta: 0.1
+  dpo_loss: "sigmoid"  # or "hinge", "ipo", "kto"
+
+# Inference Settings
+inference:
+  do_sample: true
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  max_new_tokens: 512
+  repetition_penalty: 1.1

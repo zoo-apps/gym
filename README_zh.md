@@ -4,17 +4,17 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
 [![GitHub contributors](https://img.shields.io/github/contributors/hiyouga/LLaMA-Factory?color=orange)](https://github.com/hiyouga/LLaMA-Factory/graphs/contributors)
 [![GitHub workflow](https://github.com/hiyouga/LLaMA-Factory/actions/workflows/tests.yml/badge.svg)](https://github.com/hiyouga/LLaMA-Factory/actions/workflows/tests.yml)
-[![PyPI](https://img.shields.io/pypi/v/llamafactory)](https://pypi.org/project/llamafactory/)
+[![PyPI](https://img.shields.io/pypi/v/gym)](https://pypi.org/project/gym/)
 [![Citation](https://img.shields.io/badge/citation-840-green)](https://scholar.google.com/scholar?cites=12620864006390196564)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hiyouga/llamafactory)](https://hub.docker.com/r/hiyouga/llamafactory/tags)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hiyouga/gym)](https://hub.docker.com/r/hiyouga/gym/tags)
 
-[![Twitter](https://img.shields.io/twitter/follow/llamafactory_ai)](https://twitter.com/llamafactory_ai)
+[![Twitter](https://img.shields.io/twitter/follow/gym_ai)](https://twitter.com/gym_ai)
 [![Discord](assets/thirdparty/discord.svg)](https://discord.gg/rKfvV9r9FK)
 
 [![Open in Colab](assets/thirdparty/colab.svg)](https://colab.research.google.com/drive/1d5KQtbemerlSDSxZIfAaWXhKr30QypiK?usp=sharing)
 [![Open in DSW](assets/thirdparty/dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
 [![Open in Lab4ai](assets/thirdparty/lab4ai.svg)](https://www.lab4ai.cn/course/detail?id=7c13e60f6137474eb40f6fd3983c0f46&utm_source=LLaMA-Factory)
-[![Open in Online](assets/thirdparty/online.svg)](https://www.llamafactory.com.cn/?utm_source=LLaMA-Factory)
+[![Open in Online](assets/thirdparty/online.svg)](https://www.gym.com.cn/?utm_source=LLaMA-Factory)
 [![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
 [![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
 [![Open in Novita](https://img.shields.io/badge/Novita-Deploy%20Template-blue)](https://novita.ai/templates-library/105981?sharer=88115474-394e-4bda-968e-b88e123d0c47)
@@ -48,14 +48,14 @@ https://github.com/user-attachments/assets/43b700c6-a178-41db-b1f8-8190a5d3fcfc
 
 - **入门教程**：https://zhuanlan.zhihu.com/p/695287607
 - **微调视频教程**：https://www.bilibili.com/video/BV1djgRzxEts/
-- **框架文档**：https://llamafactory.readthedocs.io/zh-cn/latest/
-- **框架文档（昇腾 NPU）**：https://ascend.github.io/docs/sources/llamafactory/
+- **框架文档**：https://gym.readthedocs.io/zh-cn/latest/
+- **框架文档（昇腾 NPU）**：https://ascend.github.io/docs/sources/gym/
 - **Colab（免费）**：https://colab.research.google.com/drive/1d5KQtbemerlSDSxZIfAaWXhKr30QypiK?usp=sharing
 - **本地机器**：请见[如何使用](#如何使用)
 - **PAI-DSW（免费试用）**：https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory
 - **九章智算云（算力优惠活动）**：https://docs.alayanew.com/docs/documents/useGuide/LLaMAFactory/mutiple/?utm_source=LLaMA-Factory
 - **官方课程**：https://www.lab4ai.cn/course/detail?id=7c13e60f6137474eb40f6fd3983c0f46&utm_source=LLaMA-Factory
-- **LLaMA Factory Online（在线微调）**：https://www.llamafactory.com.cn/?utm_source=LLaMA-Factory
+- **LLaMA Factory Online（在线微调）**：https://www.gym.com.cn/?utm_source=LLaMA-Factory
 
 > [!NOTE]
 > 除上述链接以外的其他网站均为未经许可的第三方网站，请小心甄别。
@@ -108,8 +108,8 @@ https://github.com/user-attachments/assets/43b700c6-a178-41db-b1f8-8190a5d3fcfc
 
 - 💡 [Easy Dataset × LLaMA Factory: 让大模型高效学习领域知识](https://buaa-act.feishu.cn/wiki/KY9xwTGs1iqHrRkjXBwcZP9WnL9)（中文）
 - [使用 LLaMA-Factory 微调心理健康大模型](https://www.lab4ai.cn/project/detail?id=25cce32ec131497b9e06a93336a0817f&type=project&utm_source=LLaMA-Factory)（中文）
-- [使用 LLaMA-Factory 构建 GPT-OSS 角色扮演模型](https://docs.llamafactory.com.cn/docs/documents/best-practice/gptroleplay/?utm_source=LLaMA-Factory)（中文）
-- [基于 LLaMA-Factory 和 EasyR1 打造一站式无代码大模型强化学习和部署平台 LLM Model Hub](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/)（中文）
+- [使用 LLaMA-Factory 构建 GPT-OSS 角色扮演模型](https://docs.gym.com.cn/docs/documents/best-practice/gptroleplay/?utm_source=LLaMA-Factory)（中文）
+- [基于 LLaMA-Factory 和 EasyR1 打造一站式无代码大模型强化学习和部署平台 LLM Model Hub](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-gym-and-easyr1/)（中文）
 - [通过亚马逊 SageMaker HyperPod 上的 LLaMA-Factory 增强多模态模型银行文档的视觉信息提取](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/)（英文）
 
 <details><summary>全部博客</summary>
@@ -336,9 +336,9 @@ https://github.com/user-attachments/assets/43b700c6-a178-41db-b1f8-8190a5d3fcfc
 >
 > \*\*：您需要安装特定版本的 `transformers` 以使用该模型。
 
-项目所支持模型的完整列表请参阅 [constants.py](src/llamafactory/extras/constants.py)。
+项目所支持模型的完整列表请参阅 [constants.py](src/gym/extras/constants.py)。
 
-您也可以在 [template.py](src/llamafactory/data/template.py) 中添加自己的对话模板。
+您也可以在 [template.py](src/gym/data/template.py) 中添加自己的对话模板。
 
 ## 训练方法
 
@@ -517,12 +517,12 @@ pip install -e ".[torch,metrics]" --no-build-isolation
 #### 从镜像安装
 
 ```bash
-docker run -it --rm --gpus=all --ipc=host hiyouga/llamafactory:latest
+docker run -it --rm --gpus=all --ipc=host hiyouga/gym:latest
 ```
 
 该镜像基于 Ubuntu 22.04（x86\_64）、CUDA 12.4、Python 3.11、PyTorch 2.6.0 和 Flash-attn 2.7.4 构建。
 
-查看全部镜像：https://hub.docker.com/r/hiyouga/llamafactory/tags
+查看全部镜像：https://hub.docker.com/r/hiyouga/gym/tags
 
 请参阅[构建 Docker](#构建-docker) 来重新构建镜像。
 
@@ -537,7 +537,7 @@ uv sync --extra torch --extra metrics --prerelease=allow
 在环境中运行 LLaMA-Factory：
 
 ```bash
-uv run --prerelease=allow llamafactory-cli train examples/train_lora/llama3_lora_pretrain.yaml
+uv run --prerelease=allow gym-cli train examples/train_lora/llama3_lora_pretrain.yaml
 ```
 
 </details>
@@ -654,27 +654,27 @@ pip install .
 下面三行命令分别对 Llama3-8B-Instruct 模型进行 LoRA **微调**、**推理**和**合并**。
 
 ```bash
-llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
-llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+gym-cli train examples/train_lora/llama3_lora_sft.yaml
+gym-cli chat examples/inference/llama3_lora_sft.yaml
+gym-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
 高级用法请参考 [examples/README_zh.md](examples/README_zh.md)（包括多 GPU 微调）。
 
 > [!TIP]
-> 使用 `llamafactory-cli help` 显示帮助信息。
+> 使用 `gym-cli help` 显示帮助信息。
 >
 > 遇到报错请先看[常见问题](https://github.com/hiyouga/LLaMA-Factory/issues/4614)。
 
 ### LLaMA Board 可视化微调（由 [Gradio](https://github.com/gradio-app/gradio) 驱动）
 
 ```bash
-llamafactory-cli webui
+gym-cli webui
 ```
 
 ### LLaMA Factory Online 在线微调
 
-详情阅读该[文档](https://docs.llamafactory.com.cn/docs/documents/quickstart/getstarted/?utm_source=LLaMA-Factory)。
+详情阅读该[文档](https://docs.gym.com.cn/docs/documents/quickstart/getstarted/?utm_source=LLaMA-Factory)。
 
 ### 构建 Docker
 
@@ -683,7 +683,7 @@ CUDA 用户：
 ```bash
 cd docker/docker-cuda/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 昇腾 NPU 用户：
@@ -691,7 +691,7 @@ docker compose exec llamafactory bash
 ```bash
 cd docker/docker-npu/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 AMD ROCm 用户：
@@ -699,7 +699,7 @@ AMD ROCm 用户：
 ```bash
 cd docker/docker-rocm/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 <details><summary>不使用 Docker Compose 构建</summary>
@@ -710,15 +710,15 @@ CUDA 用户：
 docker build -f ./docker/docker-cuda/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host --gpus=all \
     -p 7860:7860 \
     -p 8000:8000 \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 昇腾 NPU 用户：
@@ -727,7 +727,7 @@ docker exec -it llamafactory bash
 docker build -f ./docker/docker-npu/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=torch-npu,metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host \
     -v /usr/local/dcmi:/usr/local/dcmi \
@@ -740,10 +740,10 @@ docker run -dit --ipc=host \
     --device /dev/davinci_manager \
     --device /dev/devmm_svm \
     --device /dev/hisi_hdc \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 AMD ROCm 用户：
@@ -752,17 +752,17 @@ AMD ROCm 用户：
 docker build -f ./docker/docker-rocm/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host \
     -p 7860:7860 \
     -p 8000:8000 \
     --device /dev/kfd \
     --device /dev/dri \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 </details>
@@ -782,7 +782,7 @@ docker exec -it llamafactory bash
 ### 利用 vLLM 部署 OpenAI API
 
 ```bash
-API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
+API_PORT=8000 gym-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
 > [!TIP]
@@ -952,7 +952,7 @@ swanlab_run_name: test_run # 可选
 如果您觉得此项目有帮助，请考虑以下列格式引用
 
 ```bibtex
-@inproceedings{zheng2024llamafactory,
+@inproceedings{zheng2024gym,
   title={LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models},
   author={Yaowei Zheng and Richong Zhang and Junhao Zhang and Yanhan Ye and Zheyan Luo and Zhangchi Feng and Yongqiang Ma},
   booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},

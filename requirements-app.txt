@@ -1,0 +1,24 @@
+# Gym - AI Model Training Platform
+# Requirements for Hugging Face Spaces deployment
+# Zoo Labs Foundation Inc - zoo.ngo
+
+# Core dependencies
+torch>=2.0.0
+transformers>=4.46.0
+datasets>=2.14.0
+accelerate>=1.0.1
+peft>=0.13.2
+trl>=0.12.1
+gradio>=4.29.0
+
+# Additional requirements
+safetensors>=0.4.5
+tqdm>=4.64.1
+typer>=0.9.0
+pyyaml>=6.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+scipy>=1.10.0
+numpy<2.0.0
+pandas>=2.0.0
+fire>=0.5.0

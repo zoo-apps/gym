@@ -44,7 +44,7 @@ git checkout -b dev_your_branch
 pip install -e ".[dev]"
 ```
 
-If LLaMA Factory was already installed in the virtual environment, remove it with `pip uninstall llamafactory` before reinstalling it in editable mode with the -e flag.
+If LLaMA Factory was already installed in the virtual environment, remove it with `pip uninstall gym` before reinstalling it in editable mode with the -e flag.
 
 5. Check code before commit:
 

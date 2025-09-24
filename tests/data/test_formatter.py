@@ -15,7 +15,7 @@
 import json
 from datetime import datetime
 
-from llamafactory.data.formatter import EmptyFormatter, FunctionFormatter, StringFormatter, ToolFormatter
+from gym.data.formatter import EmptyFormatter, FunctionFormatter, StringFormatter, ToolFormatter
 
 
 FUNCTION = {"name": "tool_name", "arguments": {"foo": "bar", "size": 10}}

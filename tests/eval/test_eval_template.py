@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from llamafactory.eval.template import get_eval_template
+from gym.eval.template import get_eval_template
 
 
 def test_eval_template_en():

@@ -20,7 +20,7 @@ import torch
 import torch.distributed as dist
 from transformers import AutoConfig
 
-from llamafactory.train.tuner import run_exp
+from gym.train.tuner import run_exp
 
 
 BASE = 2  # gemm (add + mul)

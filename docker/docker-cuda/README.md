@@ -61,7 +61,7 @@ If successful, you should see your GPU information displayed.
 ```bash
 cd docker/docker-cuda/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 ### Using Docker Run
@@ -71,17 +71,17 @@ docker compose exec llamafactory bash
 docker build -f ./docker/docker-cuda/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 # Run the container
 docker run -dit --ipc=host --gpus=all \
     -p 7860:7860 \
     -p 8000:8000 \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
 # Enter the container
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 ## Troubleshooting

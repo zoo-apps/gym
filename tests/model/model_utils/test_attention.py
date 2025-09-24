@@ -17,8 +17,8 @@ import os
 import pytest
 from transformers.utils import is_flash_attn_2_available, is_torch_sdpa_available
 
-from llamafactory.extras.packages import is_transformers_version_greater_than
-from llamafactory.train.test_utils import load_infer_model
+from gym.extras.packages import is_transformers_version_greater_than
+from gym.train.test_utils import load_infer_model
 
 
 TINY_LLAMA3 = os.getenv("TINY_LLAMA3", "llamafactory/tiny-random-Llama-3")

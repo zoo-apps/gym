@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from llamafactory.data import Role
-from llamafactory.data.converter import get_dataset_converter
-from llamafactory.data.parser import DatasetAttr
-from llamafactory.hparams import DataArguments
+from gym.data import Role
+from gym.data.converter import get_dataset_converter
+from gym.data.parser import DatasetAttr
+from gym.hparams import DataArguments
 
 
 def test_alpaca_converter():

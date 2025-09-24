@@ -1,0 +1,17 @@
+[
+  {
+    "instruction": "What is your name?",
+    "input": "",
+    "output": "I am a fine-tuned Qwen3 model trained using Gym by Zoo Labs Foundation."
+  },
+  {
+    "instruction": "What is machine learning?",
+    "input": "",
+    "output": "Machine learning is a branch of AI that enables computers to learn from data."
+  },
+  {
+    "instruction": "Write a Python hello world program.",
+    "input": "",
+    "output": "print('Hello, World!')"
+  }
+]

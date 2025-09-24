@@ -1,0 +1,53 @@
+# Hugging Face Spaces Configuration
+# Zoo Labs Foundation - Gym Platform
+
+# Model files (will be downloaded on demand)
+*.bin
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Large dataset files
+*.arrow
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+
+# Cache directories
+.cache/
+cache/
+__pycache__/
+*.pyc
+
+# Output directories
+output/
+results/
+logs/
+wandb/
+runs/
+
+# Environment
+.env
+.env.local
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/

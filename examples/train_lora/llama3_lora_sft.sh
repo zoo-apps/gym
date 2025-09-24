@@ -4,7 +4,7 @@ set -x
 
 MODEL_PATH=meta-llama/Meta-Llama-3-8B-Instruct
 
-llamafactory-cli train \
+gym-cli train \
     --model_name_or_path ${MODEL_PATH} \
     --trust_remote_code \
     --stage sft \

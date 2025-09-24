@@ -20,12 +20,12 @@ import fire
 from tqdm import tqdm
 from transformers import Seq2SeqTrainingArguments
 
-from llamafactory.data import get_dataset, get_template_and_fix_tokenizer
-from llamafactory.extras.constants import IGNORE_INDEX
-from llamafactory.extras.misc import get_device_count
-from llamafactory.extras.packages import is_vllm_available
-from llamafactory.hparams import get_infer_args
-from llamafactory.model import load_tokenizer
+from gym.data import get_dataset, get_template_and_fix_tokenizer
+from gym.extras.constants import IGNORE_INDEX
+from gym.extras.misc import get_device_count
+from gym.extras.packages import is_vllm_available
+from gym.hparams import get_infer_args
+from gym.model import load_tokenizer
 
 
 if is_vllm_available():

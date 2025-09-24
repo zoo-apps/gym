@@ -15,7 +15,7 @@
 
 import pytest
 
-from llamafactory.data.processor.processor_utils import infer_seqlen
+from gym.data.processor.processor_utils import infer_seqlen
 
 
 @pytest.mark.parametrize(

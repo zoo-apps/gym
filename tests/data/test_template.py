@@ -18,9 +18,9 @@ from typing import TYPE_CHECKING
 import pytest
 from transformers import AutoTokenizer
 
-from llamafactory.data import get_template_and_fix_tokenizer
-from llamafactory.data.template import parse_template
-from llamafactory.hparams import DataArguments
+from gym.data import get_template_and_fix_tokenizer
+from gym.data.template import parse_template
+from gym.hparams import DataArguments
 
 
 if TYPE_CHECKING:

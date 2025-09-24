@@ -20,18 +20,18 @@ import pytest
 import torch
 from PIL import Image
 
-from llamafactory.data.mm_plugin import get_mm_plugin
-from llamafactory.extras.packages import is_transformers_version_greater_than
-from llamafactory.hparams import get_infer_args
-from llamafactory.model import load_tokenizer
+from gym.data.mm_plugin import get_mm_plugin
+from gym.extras.packages import is_transformers_version_greater_than
+from gym.hparams import get_infer_args
+from gym.model import load_tokenizer
 
 
 if TYPE_CHECKING:
     from transformers import PreTrainedTokenizer, ProcessorMixin
     from transformers.image_processing_utils import BaseImageProcessor
 
-    from llamafactory.data.mm_plugin import BasePlugin
-    from llamafactory.model.loader import TokenizerModule
+    from gym.data.mm_plugin import BasePlugin
+    from gym.model.loader import TokenizerModule
 
 
 HF_TOKEN = os.getenv("HF_TOKEN")

@@ -18,11 +18,11 @@ import torch
 from PIL import Image
 from transformers import AutoConfig, AutoModelForVision2Seq
 
-from llamafactory.data import get_template_and_fix_tokenizer
-from llamafactory.data.collator import MultiModalDataCollatorForSeq2Seq, prepare_4d_attention_mask
-from llamafactory.extras.constants import IGNORE_INDEX
-from llamafactory.hparams import get_infer_args
-from llamafactory.model import load_tokenizer
+from gym.data import get_template_and_fix_tokenizer
+from gym.data.collator import MultiModalDataCollatorForSeq2Seq, prepare_4d_attention_mask
+from gym.extras.constants import IGNORE_INDEX
+from gym.hparams import get_infer_args
+from gym.model import load_tokenizer
 
 
 TINY_LLAMA3 = os.getenv("TINY_LLAMA3", "llamafactory/tiny-random-Llama-3")

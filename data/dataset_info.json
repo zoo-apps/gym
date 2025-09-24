@@ -748,5 +748,26 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "zen_nano": {
+    "file_name": "/Users/z/work/zen/zen-nano/training/zen_nano_clean.jsonl",
+    "formatting": "alpaca",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "zen_nano_identity": {
+    "file_name": "/Users/z/work/zen/zen-nano/training/comprehensive_identity.jsonl",
+    "formatting": "alpaca"
+  },
+  "zen_nano_train": {
+    "file_name": "/Users/z/work/zen/zen-nano/training/train.jsonl",
+    "formatting": "alpaca"
+  },
+  "zen_nano_test": {
+    "file_name": "/Users/z/work/zen/zen-nano/training/test.jsonl",
+    "formatting": "alpaca"
   }
 }

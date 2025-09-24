@@ -17,7 +17,7 @@ import os
 import pytest
 import torch
 
-from llamafactory.train.test_utils import (
+from gym.train.test_utils import (
     check_lora_model,
     compare_model,
     load_infer_model,

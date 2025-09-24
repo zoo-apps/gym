@@ -1,0 +1,27 @@
+[
+  {
+    "instruction": "What is machine learning?",
+    "input": "",
+    "output": "Machine learning is a branch of artificial intelligence that enables computers to learn and improve from experience without being explicitly programmed. It uses algorithms to analyze data, identify patterns, and make decisions with minimal human intervention."
+  },
+  {
+    "instruction": "Explain neural networks in simple terms.",
+    "input": "",
+    "output": "Neural networks are computing systems inspired by the human brain. They consist of interconnected nodes (neurons) organized in layers that process information. Each connection has a weight that gets adjusted during training, allowing the network to learn patterns and make predictions."
+  },
+  {
+    "instruction": "What is the difference between supervised and unsupervised learning?",
+    "input": "",
+    "output": "Supervised learning uses labeled data where the model learns from input-output pairs, like learning to classify emails as spam or not spam. Unsupervised learning works with unlabeled data to find hidden patterns, like grouping customers with similar behaviors without predefined categories."
+  },
+  {
+    "instruction": "Write a Python function to calculate factorial.",
+    "input": "Number: 5",
+    "output": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\n# Example usage\nresult = factorial(5)\nprint(f'Factorial of 5 is: {result}')  # Output: 120"
+  },
+  {
+    "instruction": "Summarize the following text.",
+    "input": "Artificial intelligence has revolutionized many industries. From healthcare where it helps diagnose diseases, to transportation with self-driving cars, to entertainment with personalized recommendations. AI systems can process vast amounts of data quickly and identify patterns humans might miss.",
+    "output": "AI has transformed various sectors including healthcare (disease diagnosis), transportation (autonomous vehicles), and entertainment (personalized recommendations) by rapidly processing large datasets and detecting patterns beyond human capability."
+  }
+]

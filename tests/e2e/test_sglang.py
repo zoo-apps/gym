@@ -16,8 +16,8 @@ import sys
 
 import pytest
 
-from llamafactory.chat import ChatModel
-from llamafactory.extras.packages import is_sglang_available
+from gym.chat import ChatModel
+from gym.extras.packages import is_sglang_available
 
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B"

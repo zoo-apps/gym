@@ -189,7 +189,7 @@ def patch_model(
         print_attn_implementation(model.config)
 
     try:
-        model.add_model_tags(["llama-factory"])
+        model.add_model_tags(["zoo-gym"])
     except Exception:
         logger.warning_rank0("Cannot properly tag the model.")
 

@@ -1,4 +1,4 @@
-# Copyright 2025 the LlamaFactory team.
+# Copyright 2025 Zoo Labs Foundation Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ from setuptools import find_packages, setup
 
 
 def get_version() -> str:
-    with open(os.path.join("src", "llamafactory", "extras", "env.py"), encoding="utf-8") as f:
+    with open(os.path.join("src", "gym", "extras", "env.py"), encoding="utf-8") as f:
         file_content = f.read()
         pattern = r"{}\W*=\W*\"([^\"]+)\"".format("VERSION")
         (version,) = re.findall(pattern, file_content)
@@ -34,9 +34,9 @@ def get_requires() -> list[str]:
 
 
 def get_console_scripts() -> list[str]:
-    console_scripts = ["llamafactory-cli = llamafactory.cli:main"]
+    console_scripts = ["gym-cli = gym.cli:main"]
     if os.getenv("ENABLE_SHORT_CONSOLE", "1").lower() in ["true", "y", "1"]:
-        console_scripts.append("lmf = llamafactory.cli:main")
+        console_scripts.append("gym = gym.cli:main")
 
     return console_scripts
 
@@ -76,16 +76,16 @@ extra_require = {
 
 def main():
     setup(
-        name="llamafactory",
+        name="zoo-gym",
         version=get_version(),
-        author="hiyouga",
-        author_email="hiyouga@buaa.edu.cn",
-        description="Unified Efficient Fine-Tuning of 100+ LLMs",
+        author="Zoo Labs Foundation Inc",
+        author_email="dev@zoo.ngo",
+        description="AI Model Training Platform - Democratizing AI Education and Research",
         long_description=open("README.md", encoding="utf-8").read(),
         long_description_content_type="text/markdown",
-        keywords=["AI", "LLM", "GPT", "ChatGPT", "Llama", "Transformer", "DeepSeek", "Pytorch"],
+        keywords=["AI", "LLM", "GPT", "ChatGPT", "Llama", "Transformer", "DeepSeek", "Pytorch", "Fine-tuning", "Training", "Education"],
         license="Apache 2.0 License",
-        url="https://github.com/hiyouga/LLaMA-Factory",
+        url="https://github.com/zooai/gym",
         package_dir={"": "src"},
         packages=find_packages("src"),
         python_requires=">=3.9.0",
@@ -97,6 +97,7 @@ def main():
             "Intended Audience :: Developers",
             "Intended Audience :: Education",
             "Intended Audience :: Science/Research",
+            "Organization :: Zoo Labs Foundation :: 501(c)(3) Non-Profit",
             "License :: OSI Approved :: Apache Software License",
             "Operating System :: OS Independent",
             "Programming Language :: Python :: 3",

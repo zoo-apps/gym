@@ -16,8 +16,8 @@ import os
 
 import uvicorn
 
-from llamafactory.api.app import create_app
-from llamafactory.chat import ChatModel
+from gym.api.app import create_app
+from gym.chat import ChatModel
 
 
 def main():

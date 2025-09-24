@@ -1,25 +1,31 @@
-![# LLaMA Factory](assets/logo.png)
+# 🏋️ Gym - AI Model Training Platform
+*By Zoo Labs Foundation Inc - A 501(c)(3) Non-Profit*
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
-[![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
-[![GitHub contributors](https://img.shields.io/github/contributors/hiyouga/LLaMA-Factory?color=orange)](https://github.com/hiyouga/LLaMA-Factory/graphs/contributors)
-[![GitHub workflow](https://github.com/hiyouga/LLaMA-Factory/actions/workflows/tests.yml/badge.svg)](https://github.com/hiyouga/LLaMA-Factory/actions/workflows/tests.yml)
-[![PyPI](https://img.shields.io/pypi/v/llamafactory)](https://pypi.org/project/llamafactory/)
-[![Citation](https://img.shields.io/badge/citation-840-green)](https://scholar.google.com/scholar?cites=12620864006390196564)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hiyouga/llamafactory)](https://hub.docker.com/r/hiyouga/llamafactory/tags)
+![Gym Logo](assets/logo.png)
 
-[![Twitter](https://img.shields.io/twitter/follow/llamafactory_ai)](https://twitter.com/llamafactory_ai)
-[![Discord](assets/thirdparty/discord.svg)](https://discord.gg/rKfvV9r9FK)
+[![GitHub Repo stars](https://img.shields.io/github/stars/zooai/gym?style=social)](https://github.com/zooai/gym/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/zooai/gym)](https://github.com/zooai/gym/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/zooai/gym?color=orange)](https://github.com/zooai/gym/graphs/contributors)
+[![GitHub workflow](https://github.com/zooai/gym/actions/workflows/tests.yml/badge.svg)](https://github.com/zooai/gym/actions/workflows/tests.yml)
+[![PyPI](https://img.shields.io/pypi/v/zoo-gym)](https://pypi.org/project/zoo-gym/)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-zooai%2Fgym-yellow)](https://huggingface.co/zooai/gym)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Website](https://img.shields.io/badge/Website-zoo.ngo-purple)](https://zoo.ngo)
 
-[![Open in Colab](assets/thirdparty/colab.svg)](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
+[![Twitter](https://img.shields.io/twitter/follow/zoolabsfdn)](https://twitter.com/zoolabsfdn)
+[![Discord](assets/thirdparty/discord.svg)](https://discord.gg/zooai)
+
+[![Open in Colab](assets/thirdparty/colab.svg)](https://colab.research.google.com/github/zooai/gym/blob/main/notebooks/quickstart.ipynb)
 [![Open in DSW](assets/thirdparty/dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
 [![Open in Lab4ai](assets/thirdparty/lab4ai.svg)](https://www.lab4ai.cn/course/detail?id=7c13e60f6137474eb40f6fd3983c0f46&utm_source=LLaMA-Factory)
-[![Open in Online](assets/thirdparty/online.svg)](https://www.llamafactory.com.cn/?utm_source=LLaMA-Factory)
-[![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
-[![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
+[![Open in Online](assets/thirdparty/online.svg)](https://www.gym.com.cn/?utm_source=LLaMA-Factory)
+[![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/zooai/gym)
+[![Deploy on HF](https://img.shields.io/badge/🤗-Deploy%20on%20HF-yellow)](https://huggingface.co/zooai/gym)
 [![Open in Novita](https://img.shields.io/badge/Novita-Deploy%20Template-blue)](https://novita.ai/templates-library/105981?sharer=88115474-394e-4bda-968e-b88e123d0c47)
 
-### Used by [Amazon](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/), [NVIDIA](https://developer.nvidia.com/rtx/ai-toolkit), [Aliyun](https://help.aliyun.com/zh/pai/use-cases/fine-tune-a-llama-3-model-with-llama-factory), etc.
+### 🌟 Empowering AI Research & Education for Everyone
+
+Gym is an open-source platform for fine-tuning and deploying AI models, developed by [Zoo Labs Foundation](https://zoo.ngo), a 501(c)(3) non-profit organization dedicated to democratizing AI education and research.
 
 <div align="center" markdown="1">
 
@@ -30,13 +36,13 @@
 
 ----
 
-### Easily fine-tune 100+ large language models with zero-code [CLI](#quickstart) and [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
+### 🎯 Train, Fine-tune, and Deploy 100+ AI Models with Zero-Code Interface
 
 ![GitHub Trend](https://trendshift.io/api/badge/repositories/4535)
 
 </div>
 
-👋 Join our [WeChat](assets/wechat/main.jpg), [NPU](assets/wechat/npu.jpg), [Lab4AI](assets/wechat/lab4ai.jpg), [LLaMA Factory Online](assets/wechat/online.jpg) user group.
+👋 Join our community on [Discord](https://discord.gg/zooai) | Follow us on [Twitter](https://twitter.com/zoolabsfdn) | Visit [zoo.ngo](https://zoo.ngo)
 
 \[ English | [中文](README_zh.md) \]
 
@@ -46,14 +52,14 @@ https://github.com/user-attachments/assets/3991a3a8-4276-4d30-9cab-4cb0c4b9b99e
 
 Choose your path:
 
-- **Documentation (WIP)**: https://llamafactory.readthedocs.io/en/latest/
+- **Documentation (WIP)**: https://gym.readthedocs.io/en/latest/
 - **Documentation (AMD GPU)**: https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/notebooks/fine_tune/llama_factory_llama3.html
 - **Colab (free)**: https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing
 - **Local machine**: Please refer to [usage](#getting-started)
 - **PAI-DSW (free trial)**: https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory
 - **Alaya NeW (cloud GPU deal)**: https://docs.alayanew.com/docs/documents/useGuide/LLaMAFactory/mutiple/?utm_source=LLaMA-Factory
 - **Official Course**: https://www.lab4ai.cn/course/detail?id=7c13e60f6137474eb40f6fd3983c0f46&utm_source=LLaMA-Factory
-- **LLaMA Factory Online**: https://www.llamafactory.com.cn/?utm_source=LLaMA-Factory
+- **LLaMA Factory Online**: https://www.gym.com.cn/?utm_source=LLaMA-Factory
 
 > [!NOTE]
 > Except for the above links, all other websites are unauthorized third-party websites. Please carefully use them.
@@ -106,8 +112,8 @@ Choose your path:
 
 - 💡 [Easy Dataset × LLaMA Factory: Enabling LLMs to Efficiently Learn Domain Knowledge](https://buaa-act.feishu.cn/wiki/GVzlwYcRFiR8OLkHbL6cQpYin7g) (English)
 - [Fine-tune a mental health LLM using LLaMA-Factory](https://www.lab4ai.cn/project/detail?id=25cce32ec131497b9e06a93336a0817f&type=project&utm_source=LLaMA-Factory) (Chinese)
-- [Fine-tune GPT-OSS for Role-Playing using LLaMA-Factory](https://docs.llamafactory.com.cn/docs/documents/best-practice/gptroleplay/?utm_source=LLaMA-Factory) (Chinese)
-- [A One-Stop Code-Free Model Reinforcement Learning and Deployment Platform based on LLaMA-Factory and EasyR1](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/) (Chinese)
+- [Fine-tune GPT-OSS for Role-Playing using LLaMA-Factory](https://docs.gym.com.cn/docs/documents/best-practice/gptroleplay/?utm_source=LLaMA-Factory) (Chinese)
+- [A One-Stop Code-Free Model Reinforcement Learning and Deployment Platform based on LLaMA-Factory and EasyR1](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-gym-and-easyr1/) (Chinese)
 - [How Apoidea Group enhances visual information extraction from banking documents with multimodal models using LLaMA-Factory on Amazon SageMaker HyperPod](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/) (English)
 
 <details><summary>All Blogs</summary>
@@ -334,9 +340,9 @@ Choose your path:
 >
 > \*\*: You need to install a specific version of `transformers` to use the corresponding model.
 
-Please refer to [constants.py](src/llamafactory/extras/constants.py) for a full list of models we supported.
+Please refer to [constants.py](src/gym/extras/constants.py) for a full list of models we supported.
 
-You also can add a custom chat template to [template.py](src/llamafactory/data/template.py).
+You also can add a custom chat template to [template.py](src/gym/data/template.py).
 
 ## Supported Training Approaches
 
@@ -515,12 +521,12 @@ Extra dependencies available: torch, torch-npu, metrics, deepspeed, liger-kernel
 #### Install from Docker Image
 
 ```bash
-docker run -it --rm --gpus=all --ipc=host hiyouga/llamafactory:latest
+docker run -it --rm --gpus=all --ipc=host hiyouga/gym:latest
 ```
 
 This image is built on Ubuntu 22.04 (x86\_64), CUDA 12.4, Python 3.11, PyTorch 2.6.0, and Flash-attn 2.7.4.
 
-Find the pre-built images: https://hub.docker.com/r/hiyouga/llamafactory/tags
+Find the pre-built images: https://hub.docker.com/r/hiyouga/gym/tags
 
 Please refer to [build docker](#build-docker) to build the image yourself.
 
@@ -535,7 +541,7 @@ uv sync --extra torch --extra metrics --prerelease=allow
 Run LLaMA-Factory in the isolated environment:
 
 ```bash
-uv run --prerelease=allow llamafactory-cli train examples/train_lora/llama3_lora_pretrain.yaml
+uv run --prerelease=allow gym-cli train examples/train_lora/llama3_lora_pretrain.yaml
 ```
 
 </details>
@@ -652,27 +658,27 @@ You can also use **[Easy Dataset](https://github.com/ConardLi/easy-dataset)**, *
 Use the following 3 commands to run LoRA **fine-tuning**, **inference** and **merging** of the Llama3-8B-Instruct model, respectively.
 
 ```bash
-llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
-llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+gym-cli train examples/train_lora/llama3_lora_sft.yaml
+gym-cli chat examples/inference/llama3_lora_sft.yaml
+gym-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
 See [examples/README.md](examples/README.md) for advanced usage (including distributed training).
 
 > [!TIP]
-> Use `llamafactory-cli help` to show help information.
+> Use `gym-cli help` to show help information.
 >
 > Read [FAQs](https://github.com/hiyouga/LLaMA-Factory/issues/4614) first if you encounter any problems.
 
 ### Fine-Tuning with LLaMA Board GUI (powered by [Gradio](https://github.com/gradio-app/gradio))
 
 ```bash
-llamafactory-cli webui
+gym-cli webui
 ```
 
 ### LLaMA Factory Online
 
-Read our [documentation](https://docs.llamafactory.com.cn/docs/documents/quickstart/getstarted/?utm_source=LLaMA-Factory).
+Read our [documentation](https://docs.gym.com.cn/docs/documents/quickstart/getstarted/?utm_source=LLaMA-Factory).
 
 ### Build Docker
 
@@ -681,7 +687,7 @@ For CUDA users:
 ```bash
 cd docker/docker-cuda/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 For Ascend NPU users:
@@ -689,7 +695,7 @@ For Ascend NPU users:
 ```bash
 cd docker/docker-npu/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 For AMD ROCm users:
@@ -697,7 +703,7 @@ For AMD ROCm users:
 ```bash
 cd docker/docker-rocm/
 docker compose up -d
-docker compose exec llamafactory bash
+docker compose exec gym bash
 ```
 
 <details><summary>Build without Docker Compose</summary>
@@ -708,15 +714,15 @@ For CUDA users:
 docker build -f ./docker/docker-cuda/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host --gpus=all \
     -p 7860:7860 \
     -p 8000:8000 \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 For Ascend NPU users:
@@ -725,7 +731,7 @@ For Ascend NPU users:
 docker build -f ./docker/docker-npu/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=torch-npu,metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host \
     -v /usr/local/dcmi:/usr/local/dcmi \
@@ -738,10 +744,10 @@ docker run -dit --ipc=host \
     --device /dev/davinci_manager \
     --device /dev/devmm_svm \
     --device /dev/hisi_hdc \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 For AMD ROCm users:
@@ -750,17 +756,17 @@ For AMD ROCm users:
 docker build -f ./docker/docker-rocm/Dockerfile \
     --build-arg PIP_INDEX=https://pypi.org/simple \
     --build-arg EXTRAS=metrics \
-    -t llamafactory:latest .
+    -t gym:latest .
 
 docker run -dit --ipc=host \
     -p 7860:7860 \
     -p 8000:8000 \
     --device /dev/kfd \
     --device /dev/dri \
-    --name llamafactory \
-    llamafactory:latest
+    --name gym \
+    gym:latest
 
-docker exec -it llamafactory bash
+docker exec -it gym bash
 ```
 
 </details>
@@ -780,7 +786,7 @@ When building the Docker image, use `-v ./hf_cache:/root/.cache/huggingface` arg
 ### Deploy with OpenAI-style API and vLLM
 
 ```bash
-API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
+API_PORT=8000 gym-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
 > [!TIP]
@@ -951,7 +957,7 @@ Please follow the model licenses to use the corresponding model weights: [Baichu
 If this work is helpful, please kindly cite as:
 
 ```bibtex
-@inproceedings{zheng2024llamafactory,
+@inproceedings{zheng2024gym,
   title={LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models},
   author={Yaowei Zheng and Richong Zhang and Junhao Zhang and Yanhan Ye and Zheyan Luo and Zhangchi Feng and Yongqiang Ma},
   booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},
