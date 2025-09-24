@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "wheel", "setuptools_scm>=8", "packaging==23.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "axolotl"
+name = "zoo-gym"
 dynamic = ["version", "dependencies", "optional-dependencies"]
 description = "LLM Trainer"
 readme = "README.md"
@@ -11,21 +11,21 @@ requires-python = ">=3.10"
 # license = "Apache-2.0"
 
 [project.scripts]
-axolotl = "axolotl.cli.main:main"
+gym = "gym.cli.main:main"
 
 [project.urls]
-Homepage = "https://axolotl.ai/"
-Documentation = "https://docs.axolotl.ai/"
-Repository = "https://github.com/axolotl-ai-cloud/axolotl.git"
+Homepage = "https://zoo.dev"
+Documentation = "https://docs.zoo.dev"
+Repository = "https://github.com/zoo-labs/gym.git"
 
 [tool.setuptools_scm]
 
 [tool.setuptools]
-py-modules = ["setuptools_axolotl_dynamic_dependencies"]
+py-modules = ["setuptools_gym_dynamic_dependencies"]
 include-package-data = true
 
 [tool.setuptools.cmdclass]
-build_py = "setuptools_axolotl_dynamic_dependencies.BuildPyCommand"
+build_py = "setuptools_gym_dynamic_dependencies.BuildPyCommand"
 
 [tool.ruff]
 line-length = 88
