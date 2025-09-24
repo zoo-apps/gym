@@ -768,6 +768,15 @@
   },
   "zen_nano_test": {
     "file_name": "/Users/z/work/zen/zen-nano/training/test.jsonl",
-    "formatting": "alpaca"
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
   }
 }
