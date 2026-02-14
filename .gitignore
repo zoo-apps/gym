@@ -193,3 +193,11 @@ out/
 
 # scm auto-versioning
 src/axolotl/_version.py
+
+
+
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+GROK.md
+QWEN.md
