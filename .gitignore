@@ -201,3 +201,11 @@ CLAUDE.md
 GEMINI.md
 GROK.md
 QWEN.md
+
+# Playwright MCP cache
+.playwright-mcp/
+
+# Runtime artifacts
+assets/
+output/
+saves/
