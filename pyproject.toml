@@ -16,7 +16,7 @@ gym = "gym.cli.main:main"
 [project.urls]
 Homepage = "https://zoo.dev"
 Documentation = "https://docs.zoo.dev"
-Repository = "https://github.com/zoo-labs/gym.git"
+Repository = "https://github.com/zooai/gym.git"
 
 [tool.setuptools_scm]
 
