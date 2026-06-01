@@ -1,8 +1,8 @@
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zoo-labs/gym/main/image/gym_logo_digital_white.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zoo-labs/gym/main/image/gym_logo_digital_black.svg">
-        <img alt="Gym" src="https://raw.githubusercontent.com/zoo-labs/gym/main/image/gym_logo_digital_black.svg" width="400" height="104" style="max-width: 100%;">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zooai/gym/main/image/gym_logo_digital_white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zooai/gym/main/image/gym_logo_digital_black.svg">
+        <img alt="Gym" src="https://raw.githubusercontent.com/zooai/gym/main/image/gym_logo_digital_black.svg" width="400" height="104" style="max-width: 100%;">
     </picture>
 </p>
   <p align="center">
@@ -10,20 +10,20 @@
   </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/zoo-labs/gym.svg?color=blue" alt="GitHub License">
-    <img src="https://github.com/zoo-labs/gym/actions/workflows/tests.yml/badge.svg" alt="tests">
-    <a href="https://codecov.io/gh/zoo-labs/gym"><img src="https://codecov.io/gh/zoo-labs/gym/branch/main/graph/badge.svg" alt="codecov"></a>
-    <a href="https://github.com/zoo-labs/gym/releases"><img src="https://img.shields.io/github/release/zoo-labs/gym.svg" alt="Releases"></a>
+    <img src="https://img.shields.io/github/license/zooai/gym.svg?color=blue" alt="GitHub License">
+    <img src="https://github.com/zooai/gym/actions/workflows/tests.yml/badge.svg" alt="tests">
+    <a href="https://codecov.io/gh/zooai/gym"><img src="https://codecov.io/gh/zooai/gym/branch/main/graph/badge.svg" alt="codecov"></a>
+    <a href="https://github.com/zooai/gym/releases"><img src="https://img.shields.io/github/release/zooai/gym.svg" alt="Releases"></a>
     <br/>
-    <a href="https://github.com/zoo-labs/gym/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/zoo-labs/gym?color=yellow&style=flat-square" alt="contributors" style="height: 20px;"></a>
-    <img src="https://img.shields.io/github/stars/zoo-labs/gym" alt="GitHub Repo stars">
+    <a href="https://github.com/zooai/gym/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/zooai/gym?color=yellow&style=flat-square" alt="contributors" style="height: 20px;"></a>
+    <img src="https://img.shields.io/github/stars/zooai/gym" alt="GitHub Repo stars">
     <br/>
     <a href="https://discord.com/invite/HhrNrHJPRb"><img src="https://img.shields.io/badge/discord-7289da.svg?style=flat-square&logo=discord" alt="discord" style="height: 20px;"></a>
     <a href="https://twitter.com/zoo_labs"><img src="https://img.shields.io/twitter/follow/zoo_labs?style=social" alt="twitter" style="height: 20px;"></a>
-    <a href="https://colab.research.google.com/github/zoo-labs/gym/blob/main/examples/colab-notebooks/colab-gym-example.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google-colab" style="height: 20px;"></a>
+    <a href="https://colab.research.google.com/github/zooai/gym/blob/main/examples/colab-notebooks/colab-gym-example.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google-colab" style="height: 20px;"></a>
     <br/>
-    <img src="https://github.com/zoo-labs/gym/actions/workflows/tests-nightly.yml/badge.svg" alt="tests-nightly">
-    <img src="https://github.com/zoo-labs/gym/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
+    <img src="https://github.com/zooai/gym/actions/workflows/tests-nightly.yml/badge.svg" alt="tests-nightly">
+    <img src="https://github.com/zooai/gym/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
 </p>
 
 
@@ -31,22 +31,22 @@
 
 - 2025/07:
   - ND Parallelism support has been added into Gym. Compose Context Parallelism (CP), Tensor Parallelism (TP), and Fully Sharded Data Parallelism (FSDP) within a single node and across multiple nodes. Check out the [blog post](https://huggingface.co/blog/accelerate-nd-parallel) for more info.
-  - Gym adds more models: [GPT-OSS](https://github.com/zoo-labs/gym/tree/main/examples/gpt-oss), [Gemma 3n](https://github.com/zoo-labs/gym/tree/main/examples/gemma3n), [Liquid Foundation Model 2 (LFM2)](https://github.com/zoo-labs/gym/tree/main/examples/lfm2), and [Arcee Foundation Models (AFM)](https://github.com/zoo-labs/gym/tree/main/examples/afm).
+  - Gym adds more models: [GPT-OSS](https://github.com/zooai/gym/tree/main/examples/gpt-oss), [Gemma 3n](https://github.com/zooai/gym/tree/main/examples/gemma3n), [Liquid Foundation Model 2 (LFM2)](https://github.com/zooai/gym/tree/main/examples/lfm2), and [Arcee Foundation Models (AFM)](https://github.com/zooai/gym/tree/main/examples/afm).
   - FP8 finetuning with fp8 gather op is now possible in Gym via `torchao`. Get started [here](https://docs.zoo.dev/docs/mixed_precision.html#sec-fp8)!
-  - [Voxtral](https://github.com/zoo-labs/gym/tree/main/examples/voxtral), [Magistral 1.1](https://github.com/zoo-labs/gym/tree/main/examples/magistral), and [Devstral](https://github.com/zoo-labs/gym/tree/main/examples/devstral) with mistral-common tokenizer support has been integrated in Gym!
-  - TiledMLP support for single-GPU to multi-GPU training with DDP, DeepSpeed and FSDP support has been added to support Arctic Long Sequence Training. (ALST). See [examples](https://github.com/zoo-labs/gym/tree/main/examples/alst) for using ALST with Gym!
+  - [Voxtral](https://github.com/zooai/gym/tree/main/examples/voxtral), [Magistral 1.1](https://github.com/zooai/gym/tree/main/examples/magistral), and [Devstral](https://github.com/zooai/gym/tree/main/examples/devstral) with mistral-common tokenizer support has been integrated in Gym!
+  - TiledMLP support for single-GPU to multi-GPU training with DDP, DeepSpeed and FSDP support has been added to support Arctic Long Sequence Training. (ALST). See [examples](https://github.com/zooai/gym/tree/main/examples/alst) for using ALST with Gym!
 - 2025/05: Quantization Aware Training (QAT) support has been added to Gym. Explore the [docs](https://docs.zoo.dev/docs/qat.html) to learn more!
-- 2025/03: Gym has implemented Sequence Parallelism (SP) support. Read the [blog](https://huggingface.co/blog/zoo-labs/long-context-with-sequence-parallelism-in-gym) and [docs](https://docs.zoo.dev/docs/sequence_parallelism.html) to learn how to scale your context length when fine-tuning.
+- 2025/03: Gym has implemented Sequence Parallelism (SP) support. Read the [blog](https://huggingface.co/blog/zooai/long-context-with-sequence-parallelism-in-gym) and [docs](https://docs.zoo.dev/docs/sequence_parallelism.html) to learn how to scale your context length when fine-tuning.
 
 <details>
 
 <summary>Expand older updates</summary>
 
-- 2025/06: Magistral with mistral-common tokenizer support has been added to Gym. See [examples](https://github.com/zoo-labs/gym/tree/main/examples/magistral) to start training your own Magistral models with Gym!
-- 2025/04: Llama 4 support has been added in Gym. See [examples](https://github.com/zoo-labs/gym/tree/main/examples/llama-4) to start training your own Llama 4 models with Gym's linearized version!
+- 2025/06: Magistral with mistral-common tokenizer support has been added to Gym. See [examples](https://github.com/zooai/gym/tree/main/examples/magistral) to start training your own Magistral models with Gym!
+- 2025/04: Llama 4 support has been added in Gym. See [examples](https://github.com/zooai/gym/tree/main/examples/llama-4) to start training your own Llama 4 models with Gym's linearized version!
 - 2025/03: (Beta) Fine-tuning Multimodal models is now supported in Gym. Check out the [docs](https://docs.zoo.dev/docs/multimodal.html) to fine-tune your own!
 - 2025/02: Gym has added LoRA optimizations to reduce memory usage and improve training speed for LoRA and QLoRA in single GPU and multi-GPU training (DDP and DeepSpeed). Jump into the [docs](https://docs.zoo.dev/docs/lora_optims.html) to give it a try.
-- 2025/02: Gym has added GRPO support. Dive into our [blog](https://huggingface.co/blog/zoo-labs/training-llms-w-interpreter-feedback-wasm) and [GRPO example](https://github.com/zoo-labs/grpo_code) and have some fun!
+- 2025/02: Gym has added GRPO support. Dive into our [blog](https://huggingface.co/blog/zooai/training-llms-w-interpreter-feedback-wasm) and [GRPO example](https://github.com/zooai/grpo_code) and have some fun!
 - 2025/01: Gym has added Reward Modelling / Process Reward Modelling fine-tuning support. See [docs](https://docs.zoo.dev/docs/reward_modelling.html).
 
 </details>
@@ -77,7 +77,7 @@ Features:
 
 ### Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zoo-labs/gym/blob/main/examples/colab-notebooks/colab-gym-example.ipynb#scrollTo=msOCO4NRmRLa)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zooai/gym/blob/main/examples/colab-notebooks/colab-gym-example.ipynb#scrollTo=msOCO4NRmRLa)
 
 ### Installation
 
@@ -146,13 +146,13 @@ That's it! Check out our [Getting Started Guide](https://docs.zoo.dev/docs/getti
 ## 🤝 Getting Help
 
 - Join our [Discord community](https://discord.gg/HhrNrHJPRb) for support
-- Check out our [Examples](https://github.com/zoo-labs/gym/tree/main/examples/) directory
+- Check out our [Examples](https://github.com/zooai/gym/tree/main/examples/) directory
 - Read our [Debugging Guide](https://docs.zoo.dev/docs/debugging.html)
 - Need dedicated support? Please contact [✉️wing@zoo.dev](mailto:wing@zoo.dev) for options
 
 ## 🌟 Contributing
 
-Contributions are welcome! Please see our [Contributing Guide](https://github.com/zoo-labs/gym/blob/main/.github/CONTRIBUTING.md) for details.
+Contributions are welcome! Please see our [Contributing Guide](https://github.com/zooai/gym/blob/main/.github/CONTRIBUTING.md) for details.
 
 ## ❤️ Sponsors
 
@@ -166,7 +166,7 @@ If you use Gym in your research or projects, please cite it as follows:
 @software{gym,
   title = {Gym: Open Source LLM Post-Training},
   author = {{Zoo Labs Foundation Inc. and contributors}},
-  url = {https://github.com/zoo-labs/gym},
+  url = {https://github.com/zooai/gym},
   license = {Apache-2.0},
   year = {2023}
 }
