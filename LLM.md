@@ -20,15 +20,30 @@ pattern as every other Zoo site in that namespace (zoo-computer is the template)
   stdlib cells: `index.qmd` splices in `README.md`; `docs/custom_integrations.qmd`
   lists plugins by reading `src/gym/integrations/*/README.md`. Tiny, CPU-only,
   framework-free build.
+- **Brand logo** — the Zoo rename left the navbar/README logo *references*
+  (`image/gym_logo_digital_{white,black}.svg`) pointing at files that never
+  existed (only upstream `image/axolotl_*.svg` are present). Shipping the
+  axolotl art would leak the upstream brand, so `image/gym_logo_digital_*.svg`
+  are hand-authored "Gym" wordmarks in the repo's own palette (`styles.css`:
+  greige `#EEEEE7` + lime `#E3F8A8` on black `#141310`). Because the `render:`
+  allow-list stops Quarto auto-copying site chrome, they are force-shipped via
+  `project.resources` (only these two — not the heavy axolotl PNGs). The README
+  logo `<img>`s were repointed from dead `raw.githubusercontent.com` URLs to
+  relative `image/...` paths so the home-page logo resolves on-site.
+- **Deployed**: `ghcr.io/zooai/gym:sha-79e59cb` (rebuild on a content change;
+  CI reproduces the tag). Pod 1/1 in `zoo-mainnet`.
 - **`deploy/k8s.yaml`** — Deployment + Service + IngressRoute `zoo-gym` in
   `zoo-mainnet` (container `spa`, :3000, `/health` probes,
   `imagePullSecrets: ghcr-luxfi`, IngressRoute websecure `Host(gym.zoo.ngo)`,
   certResolver letsencrypt). `IMAGE_PLACEHOLDER` is patched to the pushed tag.
 - **`.github/workflows/docker.yml`** — canonical zooai CI (self-hosted amd64,
   `ghcr.io/zooai/gym:sha-<sha7>`, login `hanzo-dev` via `secrets.GHCR_PAT`).
-- **DNS** — Cloudflare zone `zoo.ngo`, record `gym` A → the zoo-mainnet ingress
-  origin, proxied (mirrors the `computer` record). CF creds: hanzo-k8s secret
-  `hanzo/cloudflare-credentials`.
+- **DNS** — Cloudflare zone `zoo.ngo` (id `9c6372f6…`), record `gym` =
+  `A 134.199.138.27` **proxied** (was a dead CNAME → zooai.github.io; now mirrors
+  the `computer` record exactly). Working CF creds are the **global key** in
+  **lux-k8s** secret `hanzo/cloudflare-credentials` (`CF_API_EMAIL`+`CF_API_KEY`)
+  — note the `hanzo-k8s` `hanzo/cloudflare-credentials` secret holds only
+  PLACEHOLDER values.
 
 ## What the docs build deliberately omits, and why
 The upstream Quarto config also generated two things by **introspecting the
