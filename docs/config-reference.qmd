@@ -1,0 +1,147 @@
+---
+title: Configuration Reference
+description: The YAML configuration that drives a Gym fine-tuning run.
+toc: true
+toc-depth: 3
+---
+
+A Gym run is fully described by a single YAML config file. You pass it to the
+CLI (`gym train your_config.yml`) and it is validated against a strict
+[Pydantic](https://docs.pydantic.dev) schema before training starts, so typos
+and incompatible options are caught up front rather than mid-run.
+
+The authoritative, always-current definition of every field lives in the
+schema source:
+[`src/gym/utils/schemas`](https://github.com/zoo-labs/gym/tree/main/src/gym/utils/schemas)
+— `config.py` is the top-level model, and it composes the focused models
+listed under [Schema modules](#schema-modules) below. This page is a guided
+tour of the most common options; the schema is the source of truth.
+
+## A minimal config
+
+```yaml
+base_model: NousResearch/Llama-3.2-1B
+
+datasets:
+  - path: teknium/GPT4-LLM-Cleaned
+    type: alpaca
+val_set_size: 0.1
+output_dir: ./outputs/lora-out
+
+adapter: lora
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, down_proj, up_proj]
+
+sequence_len: 2048
+sample_packing: true
+
+micro_batch_size: 2
+gradient_accumulation_steps: 2
+num_epochs: 1
+optimizer: adamw_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+bf16: auto
+gradient_checkpointing: true
+flash_attention: true
+```
+
+Ready-to-run configs for many model families live in the
+[`examples/`](https://github.com/zoo-labs/gym/tree/main/examples) directory —
+start from one close to your model and edit.
+
+## Core options
+
+### Model
+
+| Key | Description |
+| --- | --- |
+| `base_model` | HF Hub id or local path of the model to fine-tune. |
+| `tokenizer_config` | Override tokenizer if it differs from `base_model`. |
+| `model_type` / `tokenizer_type` | Force a specific loader class when auto-detection is not enough. |
+| `trust_remote_code` | Allow custom modeling code shipped with the model. |
+| `load_in_8bit` / `load_in_4bit` | Quantize the base weights for QLoRA-style training. |
+
+### Datasets
+
+| Key | Description |
+| --- | --- |
+| `datasets` | List of sources, each with a `path` and a `type` (prompt strategy). |
+| `chat_template` | Template used to render conversational data (e.g. `chatml`, `llama3`). |
+| `val_set_size` | Fraction (or count) held out for evaluation. |
+| `dataset_prepared_path` | Cache location for the tokenized/packed dataset. |
+| `sample_packing` | Pack multiple short samples into one sequence for throughput. |
+
+See [Dataset Formats](dataset-formats/index.qmd) for the full list of supported
+`type:` strategies.
+
+### Adapters (PEFT / LoRA)
+
+| Key | Description |
+| --- | --- |
+| `adapter` | `lora`, `qlora`, or unset for full fine-tuning. |
+| `lora_r` / `lora_alpha` / `lora_dropout` | LoRA rank, scaling, and dropout. |
+| `lora_target_modules` | Linear layers to attach LoRA to. |
+| `lora_modules_to_save` | Extra modules trained in full precision (e.g. resized embeddings). |
+
+### Training hyperparameters
+
+| Key | Description |
+| --- | --- |
+| `micro_batch_size` | Per-device batch size. |
+| `gradient_accumulation_steps` | Steps accumulated before an optimizer update. |
+| `num_epochs` / `max_steps` | How long to train. |
+| `optimizer` | e.g. `adamw_torch`, `adamw_8bit`, `adamw_bnb_8bit`. |
+| `learning_rate`, `lr_scheduler`, `warmup_ratio` | Learning-rate schedule. |
+| `weight_decay`, `max_grad_norm` | Regularization and gradient clipping. |
+| `sequence_len` | Maximum token length per sample. |
+
+### Precision & performance
+
+| Key | Description |
+| --- | --- |
+| `bf16` / `fp16` / `tf32` | Mixed-precision modes (`auto` picks per hardware). |
+| `gradient_checkpointing` | Trade compute for memory by recomputing activations. |
+| `flash_attention` / `sdp_attention` | Fast attention kernels. |
+| `deepspeed` / `fsdp` | Sharded multi-GPU / multi-node training backends. |
+
+### Checkpointing & logging
+
+| Key | Description |
+| --- | --- |
+| `output_dir` | Where checkpoints and the final model are written. |
+| `saves_per_epoch` / `save_steps` | Checkpoint cadence. |
+| `evals_per_epoch` / `eval_steps` | Evaluation cadence. |
+| `logging_steps` | Metric logging cadence. |
+| `wandb_*`, `mlflow_*`, `comet_*` | Experiment-tracking integrations. |
+| `hub_model_id` | Push checkpoints and the final model to the HF Hub. |
+
+## Schema modules
+
+Each focused area of the config is defined in its own module under
+[`src/gym/utils/schemas`](https://github.com/zoo-labs/gym/tree/main/src/gym/utils/schemas):
+
+| Module | Covers |
+| --- | --- |
+| `config` | Top-level model that composes all sections below. |
+| `model` | Base model, tokenizer, quantization loading. |
+| `datasets` | Dataset sources, packing, preprocessing. |
+| `training` | Hyperparameters, schedulers, batch sizing. |
+| `peft` | LoRA / ReLoRA adapter settings. |
+| `trl` | RL / preference-tuning (DPO, KTO, GRPO, ORPO) settings. |
+| `multimodal` | Vision-language configuration. |
+| `quantization` | QAT and post-training quantization. |
+| `integrations` | Third-party plugins (Liger, Cut Cross Entropy, Spectrum, …). |
+
+## Validation
+
+Because the config is validated up front, an invalid combination (for example
+`load_in_4bit` without `adapter: qlora`) fails fast with a precise error naming
+the offending field. When in doubt, copy a known-good file from
+[`examples/`](https://github.com/zoo-labs/gym/tree/main/examples) and change one
+thing at a time.
+
+See [Getting Started](getting-started.qmd) for an end-to-end walkthrough.

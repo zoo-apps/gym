@@ -1,0 +1,10 @@
+.git
+_site
+.quarto
+**/__pycache__
+**/*.pyc
+node_modules
+.venv
+.pytest_cache
+.playwright
+*.egg-info
