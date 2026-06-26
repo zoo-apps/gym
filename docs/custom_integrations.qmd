@@ -12,7 +12,7 @@ import re
 
 def process_readme(integration_name):
     try:
-        path = f'../src/axolotl/integrations/{integration_name}/README.md'
+        path = f'../src/gym/integrations/{integration_name}/README.md'
         with open(path, 'r') as f:
             txt = f.read()
             # Remove h1 headings
@@ -54,13 +54,13 @@ sections = [
     ("LLMCompressor", "llm_compressor")
 ]
 
-for folder_name in os.listdir("../src/axolotl/integrations/"):
+for folder_name in os.listdir("../src/gym/integrations/"):
     if folder_name in [path for name, path in sections]:
         # skip if already in sections
         continue
-    if os.path.exists(f"../src/axolotl/integrations/{folder_name}/README.md"):
+    if os.path.exists(f"../src/gym/integrations/{folder_name}/README.md"):
         # grab the first heading in README.md as the section name
-        with open(f"../src/axolotl/integrations/{folder_name}/README.md", "r") as f:
+        with open(f"../src/gym/integrations/{folder_name}/README.md", "r") as f:
             txt = f.read()
             matches = re.search(r'^# (.*)\n?', txt, flags=re.MULTILINE)
             if matches:

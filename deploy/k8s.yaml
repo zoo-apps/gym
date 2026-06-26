@@ -1,0 +1,80 @@
+# gym.zoo.ngo — Zoo Gym docs (Quarto static site served via ghcr.io/hanzoai/spa)
+# Mirrors the live zoo-mainnet/zoo-computer objects exactly.
+# Image tag is patched in at deploy time (sha-<short>).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zoo-gym
+  namespace: zoo-mainnet
+  labels:
+    app: zoo-gym
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zoo-gym
+  template:
+    metadata:
+      labels:
+        app: zoo-gym
+    spec:
+      imagePullSecrets:
+        - name: ghcr-luxfi
+      containers:
+        - name: spa
+          image: IMAGE_PLACEHOLDER
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zoo-gym
+  namespace: zoo-mainnet
+  labels:
+    app: zoo-gym
+spec:
+  selector:
+    app: zoo-gym
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+---
+apiVersion: hanzo.ai/v1alpha1
+kind: IngressRoute
+metadata:
+  name: zoo-gym
+  namespace: zoo-mainnet
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`gym.zoo.ngo`)
+      services:
+        - name: zoo-gym
+          port: 3000
+  tls:
+    certResolver: letsencrypt
