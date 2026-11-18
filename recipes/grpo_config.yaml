@@ -1,0 +1,21 @@
+# Reproducible GRPO Training Specification
+project_name: "zoo-gym-reasoning"
+base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+dataset: "open-thoughts/OpenThoughts-110k"
+method: "GRPO"
+
+hyperparameters:
+  learning_rate: 5.0e-6
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  num_generations: 8
+  max_seq_length: 768
+  beta: 0.04 # KL penalty coefficient
+  epochs: 1
+
+reward_weights:
+  correctness: 2.0
+  xml_format: 1.0
+  reasoning_length: 0.5
+
+reproducibility_seed: 42
