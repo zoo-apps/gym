@@ -38,6 +38,8 @@ class Adapter:
         digest = hashlib.sha256(bytes.fromhex(self.parent))
         for name in sorted(self.tensors):
             tensor = self.tensors[name]
+            if not 0 <= tensor.scale <= float(np.finfo(np.float32).max):
+                raise ValueError(f"Invalid scale: {name}")
             digest.update(json.dumps([name, len(tensor.signs)]).encode() + b"\0")
             digest.update(np.asarray(tensor.scale, dtype="<f4").tobytes())
             digest.update(tensor.signs)
@@ -81,12 +83,24 @@ def merge(base, adapters, schema, trim_fraction):
             tail = reference.size % 8
             if tail and part.signs[-1] >> tail:
                 raise ValueError(f"Nonzero padding bits: {name}")
-            if not np.isfinite(part.scale) or part.scale < 0:
-                raise ValueError(f"Invalid scale: {name}")
             bits = np.unpackbits(np.frombuffer(part.signs, dtype=np.uint8),
                                  count=reference.size, bitorder="little")
             signed = bits.astype(np.float32).reshape(reference.shape) * 2 - 1
             decoded.append(signed * np.float32(part.scale))
         ordered = np.sort(np.stack(decoded), axis=0)
-        merged[name] = reference + ordered[trim:len(adapters) - trim].mean(axis=0)
+        kept = ordered[trim:len(adapters) - trim]
+        with np.errstate(over="ignore", invalid="ignore"):
+            result = reference + kept.mean(axis=0)
+        overflow = ~np.isfinite(result)
+        if np.any(overflow):
+            # A float32 sum can overflow even when its mean fits. Recompute
+            # only affected coordinates to preserve rounding everywhere else.
+            recovered = reference[overflow].astype(np.float64) + kept[:, overflow].mean(
+                axis=0, dtype=np.float64
+            )
+            if np.any(np.abs(recovered) > float(np.finfo(np.float32).max)):
+                raise ValueError(f"Merged tensor exceeds float32 range: {name}")
+            result = np.asarray(result)
+            result[overflow] = recovered
+        merged[name] = result
     return merged

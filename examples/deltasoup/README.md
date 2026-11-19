@@ -11,6 +11,7 @@ python -m pip install numpy==2.5.1
 curl -fL 'https://archive.ics.uci.edu/static/public/80/optical+recognition+of+handwritten+digits.zip' -o optdigits.zip
 python -m unittest -v test_bitdelta
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python benchmark.py optdigits.zip > result.json
+python -c "import json; assert json.load(open('result.json')) == json.load(open('results.json')); print('Full reference report matched')"
 ```
 
 ## Data and protocol
@@ -24,6 +25,8 @@ For each seed (11, 29, 47), 800 randomly selected rows from the official trainin
 Each update tensor stores its mean absolute change as a float32 scale and one little-bit-order sign per parameter in row-major order. A zero change gets a positive sign. An all-zero tensor has scale zero. The digest of the parent binds the input and class conventions, tensor names, shapes and little-endian float32 bytes. Each adapter digest incorporates that parent and its packed tensor payloads. The report records the base, all five adapter digests, and the merged-model digest for each seed. These digests identify content and do not authenticate a contributor's identity.
 
 The merger verifies the parent and schema, checks payload lengths, finite nonnegative scales and padding bits, and rejects duplicate adapters. For the trimmed merge, each coordinate drops the smallest and largest of five decoded values and averages the remaining three. Controls use the base alone, the uncompressed mean, and the decoded one-bit mean with no trimming. There is no model selection on the test set.
+
+The finite-range tests include two float32 updates of approximately 2 × 10³⁸ and 3 × 10³⁸. Their sum overflows but their mean fits. The merger recomputes affected coordinates in float64 and rejects a reconstructed weight outside float32 range. The reference experiment uses ordinary float32 arithmetic throughout and has the same model digests with this check.
 
 ## Results
 
