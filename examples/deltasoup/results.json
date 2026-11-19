@@ -1,0 +1,192 @@
+{
+  "schema": "v1:row-major-8x8/count-div-16,tanh32,bias-last-row,digit=0123456789,parity=even-odd",
+  "numpy": "2.5.1",
+  "runs": [
+    {
+      "seed": 11,
+      "train_sizes": [
+        605,
+        605,
+        605,
+        604,
+        604
+      ],
+      "parent": "810dff2a6af552dcc93a3fde919289a0305b2a3e51bdfad5e6d8ce34dcef3898",
+      "adapters": [
+        "1c7bacd71a927d8eb025e02e3e5fd5d5e3ecdc707a6cc5ba7cce1a371ee774a3",
+        "e30cb94c0dba469d4ba5c55228f8e89049e0fd315b45274f08832824e66110d4",
+        "122b23f87015474bb48516ddffaaeb1bc5b56e51e009a3028536c532a177dd96",
+        "83b03b214be8bfb750bee2a3fc77d33a6c4bac64c47f78675a40279f71b8d273",
+        "2cdd108279c2d7bc504c91158cb05fb656d87402a92bb42afa8e243ded12dcee"
+      ],
+      "merged": "eb7df3f520c30823c2ea4ed20b50191353da3b8c62a628bbc26863b531356958",
+      "test_rows": 1797,
+      "correct": {
+        "base": {
+          "digit": 1633,
+          "parity": 1627
+        },
+        "full_mean": {
+          "digit": 1656,
+          "parity": 1664
+        },
+        "one_bit_mean": {
+          "digit": 1652,
+          "parity": 1645
+        },
+        "one_bit_trimmed": {
+          "digit": 1649,
+          "parity": 1648
+        }
+      },
+      "individual_correct": [
+        {
+          "digit": 1633,
+          "parity": 1605
+        },
+        {
+          "digit": 1658,
+          "parity": 1669
+        },
+        {
+          "digit": 1636,
+          "parity": 1646
+        },
+        {
+          "digit": 1656,
+          "parity": 1652
+        },
+        {
+          "digit": 1656,
+          "parity": 1664
+        }
+      ],
+      "full_delta_bytes": 9904,
+      "packed_delta_bytes": 323
+    },
+    {
+      "seed": 29,
+      "train_sizes": [
+        605,
+        605,
+        605,
+        604,
+        604
+      ],
+      "parent": "abcd1e7d9122c49fcffa73303bdc5b6b3ab3ea8f1aaa1b40c95258a7465d5ecc",
+      "adapters": [
+        "80d46aa6f134cf38f5b8666be728258b62edf97abb84643f679965a410f8cbaa",
+        "ac9460003e633f999f375072c6363ca26db6b830832f1d8a972b61442132028e",
+        "fa59ef54b0a8595dec77a27ee8daa02c95f2ee5777ae8335277f971ddea2156d",
+        "9fba68a7a9f7bcec78f629e2828b88a484fbbf9185e18bb568b72d8758cd9841",
+        "5d55f5dca04f19ca552cd2adbdddd04ad9436f5f1ce94e68f37fa84a7dcda54c"
+      ],
+      "merged": "ce49ce2ff68d0c2dd351f812e127f423fc26026909128e011c8baf693945c429",
+      "test_rows": 1797,
+      "correct": {
+        "base": {
+          "digit": 1629,
+          "parity": 1637
+        },
+        "full_mean": {
+          "digit": 1661,
+          "parity": 1665
+        },
+        "one_bit_mean": {
+          "digit": 1646,
+          "parity": 1650
+        },
+        "one_bit_trimmed": {
+          "digit": 1645,
+          "parity": 1650
+        }
+      },
+      "individual_correct": [
+        {
+          "digit": 1657,
+          "parity": 1666
+        },
+        {
+          "digit": 1644,
+          "parity": 1664
+        },
+        {
+          "digit": 1654,
+          "parity": 1650
+        },
+        {
+          "digit": 1656,
+          "parity": 1665
+        },
+        {
+          "digit": 1655,
+          "parity": 1647
+        }
+      ],
+      "full_delta_bytes": 9904,
+      "packed_delta_bytes": 323
+    },
+    {
+      "seed": 47,
+      "train_sizes": [
+        605,
+        605,
+        605,
+        604,
+        604
+      ],
+      "parent": "dd4d22fca44231c7dd4701406ffcc52595725d589b35da0c574eef8f54ad3632",
+      "adapters": [
+        "8bc69063ffe8230ad6c6c82fc49865a213ed8384332846f02c0109517df818cc",
+        "fe5240164c95197820a1469b65ab1832923f520e4c5e71b7afe106225b8f71fc",
+        "6c9075b5837d8e9999e152490270c0b2a1d9bb0143b4b03d76cb85b236d74f8b",
+        "dff7603e6cfe4a5d83cb6a3359c8308141fde156897cdee44b4cb68a707f6203",
+        "d46439952ed5e447a9fbf98ff6d68be9d93a400c31c5b5825604488ab06fc929"
+      ],
+      "merged": "5aa00554f8a3b3da8fa3786e8e7cbee085e07642e61b07d08004d8524155f050",
+      "test_rows": 1797,
+      "correct": {
+        "base": {
+          "digit": 1645,
+          "parity": 1619
+        },
+        "full_mean": {
+          "digit": 1663,
+          "parity": 1660
+        },
+        "one_bit_mean": {
+          "digit": 1661,
+          "parity": 1637
+        },
+        "one_bit_trimmed": {
+          "digit": 1660,
+          "parity": 1637
+        }
+      },
+      "individual_correct": [
+        {
+          "digit": 1653,
+          "parity": 1634
+        },
+        {
+          "digit": 1653,
+          "parity": 1647
+        },
+        {
+          "digit": 1661,
+          "parity": 1637
+        },
+        {
+          "digit": 1666,
+          "parity": 1657
+        },
+        {
+          "digit": 1655,
+          "parity": 1654
+        }
+      ],
+      "full_delta_bytes": 9904,
+      "packed_delta_bytes": 323
+    }
+  ]
+}
