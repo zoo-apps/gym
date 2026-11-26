@@ -1,0 +1,74 @@
+# Zoo Gym + TRL GRPOConfig / GRPOTrainer Recipe (HIP-1350 / zoo-apps/gym#7)
+# License: Apache-2.0
+# Maintained Trainer: huggingface/trl (aligned with src/gym/utils/schemas/trl.py)
+# Note: Open-R1 is an archived historical reference only and is NOT used here.
+# Separate human license review is required for base model weights and
+# OpenThoughts traces before production redistribution (see LICENSE_AUDIT.json).
+
+recipe_metadata:
+  hip: HIP-1350
+  issue: zoo-apps/gym#7
+  trainer_framework: huggingface/trl
+  recipe_license: Apache-2.0
+  base_model_license: Apache-2.0
+  dataset_license: Apache-2.0
+  separate_license_review_required: true
+
+base_model: Qwen/Qwen2.5-1.5B-Instruct
+model_revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+trust_remote_code: false
+
+rl: grpo
+trl:
+  beta: 0.04
+  max_completion_length: 1024
+  use_vllm: true
+  vllm_mode: colocate
+  num_generations: 8
+  num_iterations: 2
+  epsilon: 0.2
+  scale_rewards: true
+  loss_type: grpo
+  temperature: 0.8
+  top_p: 0.95
+  mask_truncated_completions: true
+  log_completions: true
+  num_completions_to_print: 4
+  reward_funcs:
+    - examples.grpo_reasoning.rewards.trl_format_reward_func
+    - examples.grpo_reasoning.rewards.trl_correctness_reward_func
+  reward_weights:
+    - 0.25
+    - 0.75
+
+datasets:
+  - path: open-thoughts/OpenThoughts-114k
+    revision: main
+    split: train[:95%]
+    type: grpo_verifiable_reasoning
+
+independent_held_out_eval:
+  dataset_path: examples/grpo_reasoning/dataset.py
+  verifier_module: examples.grpo_reasoning.rewards
+  verifier_version: hip1350-verifier-v1.0.0
+  eval_seed: 1350
+  require_zero_leakage_check: true
+
+adapter: lora
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_linear: true
+
+sequence_len: 2048
+micro_batch_size: 2
+gradient_accumulation_steps: 4
+num_epochs: 1
+optimizer: adamw_torch_fused
+learning_rate: 5e-6
+lr_scheduler: cosine
+warmup_ratio: 0.05
+bf16: true
+gradient_checkpointing: true
+seed: 1350
+output_dir: ./outputs/grpo-qwen25-1.5b-openthoughts

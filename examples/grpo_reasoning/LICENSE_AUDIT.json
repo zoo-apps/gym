@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "hip": "HIP-1350",
+  "issue": "zoo-apps/gym#7",
+  "policy": {
+    "source_code_license": "Apache-2.0",
+    "external_artifacts_rule": "Datasets, reasoning traces, model weights, and external SDKs require a separate license review by authorized human maintainers before production deployment or redistribution.",
+    "governance_boundary": "AI agents may recommend, flag conflicts, estimate value, and prepare plans, but must not redefine voting rules, authorize treasury spending, or declare their own experiments valid."
+  },
+  "artifacts": [
+    {
+      "id": "zoo-gym-grpo-reasoning-src",
+      "category": "source_code",
+      "name": "examples/grpo_reasoning",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": false,
+      "status": "APPROVED",
+      "notes": "Clean-room Apache-2.0 pure Python stdlib implementation and test suite."
+    },
+    {
+      "id": "verifiable-reasoning-microbench",
+      "category": "dataset",
+      "name": "examples/grpo_reasoning/dataset.py (deterministic procedural split)",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": false,
+      "status": "APPROVED_OFFLINE_BENCHMARK",
+      "notes": "Procedurally generated deterministic arithmetic, symbolic logic, and code-trace tasks with zero third-party copyrighted text."
+    },
+    {
+      "id": "huggingface-trl",
+      "category": "external_sdk",
+      "name": "huggingface/trl (GRPOConfig / GRPOTrainer)",
+      "repository": "https://github.com/huggingface/trl",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": true,
+      "status": "APPROVED_EXTERNAL_TRAINER",
+      "notes": "Current maintained RLHF/GRPO library integrated with Zoo Gym (src/gym/utils/schemas/trl.py)."
+    },
+    {
+      "id": "volcengine-verl",
+      "category": "external_sdk",
+      "name": "volcengine/verl (Ray GRPO)",
+      "repository": "https://github.com/volcengine/verl",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": true,
+      "status": "APPROVED_EXTERNAL_TRAINER",
+      "notes": "Current maintained scalable Ray-based RL post-training framework supporting GRPO and Schulman k3 low-variance KL."
+    },
+    {
+      "id": "openthoughts-114k",
+      "category": "dataset",
+      "name": "open-thoughts/OpenThoughts-114k",
+      "repository": "https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": true,
+      "status": "REVIEW_REQUIRED_BEFORE_PRODUCTION",
+      "notes": "Openly licensed reasoning trace dataset; trace provenance and teacher-model terms require separate human legal review prior to production weight release."
+    },
+    {
+      "id": "qwen2.5-1.5b-instruct",
+      "category": "model_weights",
+      "name": "Qwen/Qwen2.5-1.5B-Instruct",
+      "repository": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": true,
+      "status": "REVIEW_REQUIRED_BEFORE_PRODUCTION",
+      "notes": "Pinned small base model candidate for GPU GRPO reproduction; exact commit revision must be verified by maintainers before production release."
+    },
+    {
+      "id": "zen-1.5b-base",
+      "category": "model_weights",
+      "name": "zenlm/zen-1.5b-instruct",
+      "repository": "https://huggingface.co/zenlm",
+      "license": "Apache-2.0",
+      "maintained": true,
+      "separate_license_review_required": true,
+      "status": "REVIEW_REQUIRED_BEFORE_PRODUCTION",
+      "notes": "Zen open-weight family candidate; pin exact checkpoint hash before production runs."
+    },
+    {
+      "id": "huggingface-open-r1",
+      "category": "historical_reference",
+      "name": "huggingface/open-r1",
+      "repository": "https://github.com/huggingface/open-r1",
+      "license": "Apache-2.0",
+      "maintained": false,
+      "separate_license_review_required": true,
+      "status": "HISTORICAL_REFERENCE_ONLY_DO_NOT_USE",
+      "notes": "Upstream repository explicitly states it is no longer maintained. Excluded from all training recipes, imports, and dependencies."
+    }
+  ]
+}
